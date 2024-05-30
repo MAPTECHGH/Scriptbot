@@ -10,7 +10,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Admin user ID (replace with the actual admin user ID)
-ADMIN_ID = 123456789
+ADMIN_ID = 1238012521
 
 # Dictionary to store user access levels and expiration times
 user_access = {}
@@ -59,7 +59,7 @@ def grant(update: Update, context: CallbackContext) -> None:
     user = update.message.from_user
     code = context.args[0] if len(context.args) > 0 else None
 
-    if code == "your_secret_code":  # Replace with your logic to validate codes
+    if code == "maptech":  # Replace with your logic to validate codes
         # Here we assume the code corresponds to an access level
         access_level = "premium"  # Modify this based on your logic to map code to access level
         if access_level in access_levels:
@@ -117,7 +117,7 @@ def unknown(update: Update, _: CallbackContext) -> None:
 
 def main() -> None:
     # Create the Updater and pass it your bot's token
-    updater = Updater("YOUR_BOT_TOKEN")
+    updater = Updater("7398127644:AAG63cejxNRpHFj8BiL_Vmo4QJGCezbhyfU")
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
